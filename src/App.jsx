@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import viteLogo from './assets/image.png'
 import "./Css/estilo.css";
 import { MenuOutlined } from "@ant-design/icons";
 import Rolagem from "./Carousel/Carosel";
@@ -15,7 +15,12 @@ function App() {
       </div>
 
       <div className="Janela1">
-        <div className="posicao1">
+      <picture  className="posicao1" 
+      // style={{
+      //   backgroundImage: `url(${viteLogo })`,
+      // }}
+      >
+   
         <div className="centralizarbutao">
         <button id="butao1">Agendamento</button>
         </div>
@@ -23,8 +28,10 @@ function App() {
             Por detrás de <br />
             cada cliente
           </h5>
+      </picture>
+       
         </div>
-      </div>
+    
       {/* <div>
 <Rolagem/>
       </div> */}
