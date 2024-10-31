@@ -1,5 +1,39 @@
-
 @media (min-width: 360px) and (max-width: 414px) {
+.img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  background-color: #33ff00;
+}
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    background-color: #f2f2f2; /* Cor de fundo dos cartões */
+    border: 1px solid #ccc; /* Borda dos cartões */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px;
+    width: 100px; /* Largura dos cartões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s; /* Transição suave */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Efeito de hover */
+  }
+  
+  /* Para criar o efeito de degrau */
+  .card:nth-child(2) {
+    margin-top: 20px; /* Ajuste para o segundo cartão */
+  }
+  
+  .card:nth-child(1) {
+    margin-top: 40px; /* Ajuste para o terceiro cartão */
+  }
+
+
+  /*  */
   :root {
     --color-primay: #626161;
     --color-second: #020202;
@@ -12,18 +46,41 @@
     justify-items: center;
     flex-direction: column;
   }
-  .posicao1 {
-    /* background-image: url("/project1/src/assets/image.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
+  .Janela2 {
+    margin-top: 0.8rem;
+    color: #fff;
+    background-color: #1c1b1b;
+    padding: 0.2rem;
+    /* width: 100%;
+    height: 300px; */
+  }
+  .Janela3 {
+    margin-top: 0.8rem;
+    color: #fff;
+    background-color: #1c1b1b;
+    padding: 0.2rem;
+    height: 300px;
+    /* width: 100%;
+    height: 300px; */
+  }
+  .tagCard{
+    margin-top:1rem ;
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    background-image: url("../assets/image.png");
+    justify-content: center;
+    gap: 0.5rem;
+ 
+  }
+  .posicao1 {
+
+    width: 100%;
+    background-image: url("../assets/fundo.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     height: 50vh; /* Altura relativa à viewport */
-}
+  }
   .centralizarbutao {
     display: flex;
     justify-content: center;
@@ -31,7 +88,7 @@
     position: relative;
     top: 180px;
   }
-  #butao1:hover{
+  #butao1:hover {
     border: 2px solid #33ff00;
     background-color: #fff;
     color: #020202;
@@ -45,7 +102,12 @@
     width: 125px;
   }
   #texto1 {
+    margin: 0;
+    padding: 0.2rem;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
     color: white;
+    font-size: 18px;
     text-align: center;
   }
   #texto2 {
@@ -67,7 +129,7 @@
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
-    margin: 0 ;
+    margin: 0;
     padding: 0.8rem;
   }
   .Menu1 {
@@ -87,20 +149,17 @@
     display: flex;
     width: 100%;
     height: 60vh;
-    /* justify-self: center; */
     justify-items: center;
-    /* justify-content: center; */
 
-    /* background-color: aqua; */
   }
   .icon {
     font-size: 25px;
-    color: #33ff00;;
+    color: #33ff00;
   }
   #subMenu {
     border: none;
-     background-color: var(--color-second);
-     padding: 0.8rem;
+    background-color: var(--color-second);
+    padding: 0.8rem;
   }
   body {
     background-color: rgb(59, 59, 59);
