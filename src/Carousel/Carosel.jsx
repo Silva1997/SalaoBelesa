@@ -15,9 +15,7 @@ const Rolagem = () => {
         //  autoplay
         style={{
           display:'flex',
-          justifyItems:'center',
-          // justifyContent:'center',
-          // justifySelf:'center',
+       flexWrap:'wrap',
           height:"300px"
         }}
       >
