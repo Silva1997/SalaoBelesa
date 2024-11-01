@@ -15,14 +15,17 @@ const Rolagem = () => {
         style={{
           display: "flex",
           justifyContent: "center",
-          height: "300px",
+          justifyItems:'center',
+          height: "450px",
+          padding:'2rem',
+          gap:'0.2rem'
         }}
       >
-        <div style={{display:'flex',justifyItems:'center',justifyContent:'center'}}>
-          <App />
+        <div className="card1">
+        {/* <img src={Imagem1} alt="imagem" className="img" style={{height:'40vh'}}/> */}
         </div>
-        <div style={{display:'flex',justifyItems:'center',justifyContent:'center'}}>
-          <App />
+        <div className="card1" >
+       
         </div>
       </Carousel>
     </>
