@@ -1,16 +1,7 @@
 import React from "react";
-import { Carousel, Card, Image } from "antd";
-import Cards from "../Cartao/Cards";
+import { Carousel, Card} from "antd";
 import Imagem1 from "../assets/Na.jpg";
-const { Meta } = Card;
-const contentStyle = {
-  margin: 0,
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
+
 const Rolagem = () => {
   const onChange = (currentSlide) => {
     console.log(currentSlide);
@@ -23,6 +14,10 @@ const Rolagem = () => {
         arrows
         //  autoplay
         style={{
+          display:'flex',
+          justifyItems:'center',
+          // justifyContent:'center',
+          // justifySelf:'center',
           height:"300px"
         }}
       >

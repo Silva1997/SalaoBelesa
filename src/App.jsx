@@ -3,7 +3,7 @@ import "./Css/estilo.css";
 import Card from "antd/es/card/Card";
 import { MenuOutlined } from "@ant-design/icons";
 import Rolagem from "./Carousel/Carosel";
-import foto1 from './assets/image.png'
+import foto1 from "./assets/unha.png";
 
 function App() {
   return (
@@ -36,14 +36,29 @@ function App() {
       <div className="Janela3">
         <h6 id="texto1">Nossos Serviços</h6>
         <div className="tagCard">
-         
-          <Card 
-          className="card">
-          <img src={foto1} className="img" alt="imagem1"/>
-          
-          </Card>
-          <Card className="card">2</Card>
-          <Card className="card">3</Card>
+          <div className="tagCard-1">
+            <p id="texto4"> Manicure</p>
+            <Card
+              className="card"
+              cover={<img alt="example" src={foto1} className="img" />}
+            >
+              2
+            </Card>
+            <p id="texto4"> Penicure</p>
+            <Card
+              className="card"
+              cover={<img alt="example" src={foto1} className="img" />}
+            >
+              2
+            </Card>
+            <p id="texto4"> Cabeleiro</p>
+            <Card
+              className="card"
+              cover={<img alt="example" src={foto1} className="img" />}
+            >
+              3
+            </Card>
+          </div>
         </div>
       </div>
     </>
