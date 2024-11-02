@@ -47,7 +47,7 @@ function App() {
             <p id="texto4"> Penicure</p>
             <Card
               className="card"
-              cover={<img alt="example" src={foto1} className="img" />}
+              cover={<img alt="example" src={foto1} className="img1" />}
             >
               2
             </Card>
