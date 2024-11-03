@@ -1,9 +1,27 @@
 import React from "react";
 import { Carousel, Card } from "antd";
-import Imagem1 from "../assets/Na.jpg";
-import '../Css/estilo.css'
+import Imagem1 from "../assets/Tranca1.png";
+import Imagem2 from "../assets/Tranca2.png";
+import Imagem3 from "../assets/Tranca3.png";
+import "../Css/estilo.css";
 
 const Rolagem = () => {
+  let dados = [
+    {
+      url: Imagem1,
+      nome: "12.000,00 Akz",
+    },
+    {
+      url: Imagem2,
+      nome: "10.000,00 Akz",
+    },
+    {
+      url: Imagem3,
+      nome: "15.000,00 Akz",
+    },
+  ];
+  console.log(JSON.stringify(dados));
+
   const onChange = (currentSlide) => {
     console.log(currentSlide);
   };
@@ -16,37 +34,28 @@ const Rolagem = () => {
         style={{
           display: "flex",
           justifyContent: "center",
-          justifyItems:'center',
-          height: "450px",
-          padding:'2rem',
-          
+          justifyItems: "center",
+          height: "420px",
+          padding: "0.7rem",
+       
         }}
       >
-        <Card >
-        {/* <img src={Imagem1} alt="imagem" className="img1" style={{height:'40vh'}}/> */}
-        </Card>
+        {dados.map((dado, index) => (
+          <div className="test1" key={index}>
+            <img
+              src={dado.url}
+              alt="imagem"
+              className="img1"
+              style={{ height: "40vh" }}
+            />
 
-       <div className="test1">
-        <img src={Imagem1} alt="imagem" className="img1" style={{height:'40vh'}}/>
-        </div>
+            <h6 className="promocao">{dado.nome}</h6>
+          </div>
+        ))}
       </Carousel>
     </>
   );
 };
 export default Rolagem;
 
-const App = () => (
-  <Card
-    // bordered={false}
-    hoverable
-    style={{
-      width: "200px",
-      height: "12px",
-      borderRadius: "12px 12px",
-      // margin:"1rem"
-    }}
-    cover={<img alt="example" src={""} />}
-  >
-    {/* <Meta title="Europe Street beat" description="www.instagram.com" /> */}
-  </Card>
-);
+
