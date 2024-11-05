@@ -1,11 +1,19 @@
 import "./Css/estilo.css";
-import Card from "antd/es/card/Card";
+import { useState } from "react";
+// import Card from "antd/es/card/Card";
 import { MenuOutlined } from "@ant-design/icons";
 import Rolagem from "./Carousel/Carosel";
-import foto1 from "./assets/unha.png";
+import foto1 from "./assets/manicure.jpg";
+import foto2 from "./assets/penicure.jpg";
+import foto3 from "./assets/cabelo.jpg";
 import { WhatsAppOutlined, PhoneOutlined } from "@ant-design/icons";
 
 function App() {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
   return (
     <>
       <div className="Menu1">
@@ -15,12 +23,14 @@ function App() {
         </button>
       </div>
 
-      <div className="Janela1">
-        <picture className="posicao1">
-          <div className="centralizarbutao">
-            <button id="butao1">Agendamento</button>
+      <div className="Janela1" id="Janela1">
+        <picture className="posicao1" id="posicao1">
+          <div className="centralizarbutao" id="centralizarbutao">
+            <button className="b_butao" id="butao1">
+              Agendamento
+            </button>
           </div>
-          <h5 id="texto2">
+          <h5 id="texto2" className="texto2">
             Por detrás de <br />
             cada cliente
           </h5>
@@ -50,27 +60,44 @@ function App() {
         <h6 id="texto1">Nossos Serviços</h6>
         <div className="tagCard">
           <div className="tagCard-1">
-            <p id="texto4"> Manicure</p>
-            <Card
-              className="card"
-              cover={<img alt="example" src={foto1} className="img" />}
-            >
-         <p> Pés bem cuidados, passos mais leves.</p>
-            </Card>
-            <p id="texto4"> Penicure</p>
-            <Card
-              className="card"
-              cover={<img alt="example" src={foto1} className="img" />}
-            >
-          <p>Unhas impecáveis, confiança inabalável</p>
-            </Card>
-            <p id="texto4"> Cabeleiro</p>
-            <Card
-              className="card"
-              cover={<img alt="example" src={foto1} className="img" />}
-            >
-              Transforme seu visual, realce sua beleza.
-            </Card>
+            <div className="card-container">
+              <div className="card">
+                <img alt="example" src={foto1} className="img-card " />
+                <div className="texto-card-div">
+                  <h3 className="texto-card">Manicure</h3>
+                  <p className="texto-card1">
+                    {" "}
+                    Pés bem cuidados, passos mais leves.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-container1">
+              <div className="card">
+                <img alt="example" src={foto2} className="img-card " />
+                <div className="texto-card-div">
+                  <h3 className="texto-card">Penicure</h3>
+                  <p className="texto-card1">
+                    {" "}
+                    Pés bem cuidados, passos mais leves.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="card-container2" >
+              <div className="card-fundo"></div>
+              <div className="card">
+                <img alt="example" src={foto3} className="img-card " />
+                <div className="texto-card-div">
+                  <h3 className="texto-card">Cabeleiro</h3>
+                  <p className="texto-card1">
+                    {" "}
+                    Pés bem cuidados, passos mais leves.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

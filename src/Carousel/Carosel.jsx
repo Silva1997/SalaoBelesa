@@ -31,14 +31,15 @@ const Rolagem = () => {
       <Carousel
         afterChange={onChange}
         arrows
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          justifyItems: "center",
-          height: "420px",
-          padding: "0.7rem",
+        className="Rodalgem"
+        // style={{
+        //   display: "flex",
+        //   justifyContent: "center",
+        //   justifyItems: "center",
+        //   height: "420px",
+        //   padding: "0.7rem",
        
-        }}
+        // }}
       >
         {dados.map((dado, index) => (
           <div className="test1" key={index}>
