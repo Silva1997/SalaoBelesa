@@ -32,14 +32,6 @@ const Rolagem = () => {
         afterChange={onChange}
         arrows
         className="Rodalgem"
-        // style={{
-        //   display: "flex",
-        //   justifyContent: "center",
-        //   justifyItems: "center",
-        //   height: "420px",
-        //   padding: "0.7rem",
-       
-        // }}
       >
         {dados.map((dado, index) => (
           <div className="test1" key={index}>
