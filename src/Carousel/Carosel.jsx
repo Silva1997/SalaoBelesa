@@ -1,5 +1,5 @@
-import React from "react";
-import { Carousel, Card } from "antd";
+
+import { Carousel } from "antd";
 import Imagem1 from "../assets/Tranca1.png";
 import Imagem2 from "../assets/Tranca2.png";
 import Imagem3 from "../assets/Tranca3.png";

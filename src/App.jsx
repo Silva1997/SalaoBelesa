@@ -1,51 +1,69 @@
-import React from "react";
+
 import "./Css/estilo.css";
-import { MenuOutlined } from "@ant-design/icons";
+import Rotas from "./Rotas/Rotas";
 import Rolagem from "./Carousel/Carosel";
 import foto1 from "./assets/manicure.jpg";
 import foto2 from "./assets/penicure.jpg";
 import foto3 from "./assets/cabelo.jpg";
 import foto4 from "./assets/logo.png";
-import { WhatsAppOutlined, PhoneOutlined,HeatMapOutlined } from "@ant-design/icons";
+import Gaveta from './compont/Gaveta'
+import { PhoneOutlined, HeatMapOutlined } from "@ant-design/icons";
 
 function App() {
- 
+  
+
   return (
     <>
-      <div className="Barra-de-menu">
-       <div ><img id="img-menu-icon" src={foto4} alt="p"/></div>
-        <button id="subMenu">
-          <MenuOutlined size={20} className="icon" />
-        </button>
-      </div>
+      <nav className="Barra-de-menu">
+        <div>
+          <img id="img-menu-icon" src={foto4} alt="p" />
+        </div>
+        <Rotas />
+      </nav>
 
       <div className="Janela1" id="Janela1">
         <picture className="fundo-imagem" id="fundo-janela1">
-       <div  className="fundo-texto-imagem">
-       <div className="centralizarbutao" id="centralizarbutao">
+          <div className="fundo-texto-imagem">
+            <div className="centralizarbutao" id="centralizarbutao">
+          
+               <Gaveta />
+          
+                {/* <button
+                  className="b_butao"
+                  id="butao1"
+                  onClick={() => {
+                    Abrir();
+                  }}
+                >
+                  Agendamento
+                </button> */}
+            
+            </div>
+            <h5 id="texto2" className="texto2">
+              Por detrás de <br />
+              cada cliente
+            </h5>
+          </div>
+        </picture>
+
+        <div className="div-fundo-imagem">
+          {/* 
+       <section className="section-agendar">
+  <div className="section-agendar-img"></div> 
+  <div className="container"> */}
+          <h5 id="div-texto">
+            Por detrás de cada cliente,
+            <br /> a excelência no serviço
+          </h5>
+
+          <div className="centralizarbutao" id="centralizarbutao">
             <button className="b_butao" id="butao1">
-              Agendamento
+              Agende o seu momento!
             </button>
           </div>
-          <h5 id="texto2" className="texto2">
-            Por detrás de <br />
-            cada cliente
-          </h5>
-       </div>
-        </picture>
-{/* display nenhum */}
-        <div className="div-fundo-imagem">
-
-<div className="centralizarbutao" id="centralizarbutao">
-    <button className="b_butao" id="butao1">
-      Agendamento
-    </button>
-  </div>
-  <h5 id="texto2" className="texto2">
-    Por detrás de <br />
-    cada cliente
-  </h5>
-</div>
+          {/* </div>
+</section> */}
+        </div>
       </div>
 
       <div className="Janela2">
@@ -55,8 +73,10 @@ function App() {
       </div>
 
       <div className="Janela2 ">
-        <h6 id="texto1"><span id="text-1">02.</span>Sobre Nós </h6>  <hr id="text-1_1"></hr>
-
+        <h6 id="texto1">
+          <span id="text-1">02.</span>Sobre Nós{" "}
+        </h6>{" "}
+        <hr id="text-1_1"></hr>
         <p id="texto-paragrafo">
           No coração de Malanje, Espelho Meu é um salão que brilha não só pelo
           luxo, mas pelo talento incrível da nossa equipa. Oferecemos serviços
@@ -68,11 +88,12 @@ function App() {
       </div>
       {/* Servicos */}
       <div className="Janela3">
-        <h6 id="texto0"><span id="text-1">03.</span>Serviços</h6> <hr id="text-1_2"></hr>
+        <h6 id="texto0">
+          <span id="text-1">03.</span>Serviços
+        </h6>{" "}
+        <hr id="text-1_2"></hr>
         <div className="tagCard">
-
           <div className="tagCard-1">
-
             <div className="card-container">
               <div className="card">
                 <img alt="example" src={foto1} className="img-card " />
@@ -86,7 +107,7 @@ function App() {
               </div>
             </div>
 
-            <div className="card-container1">
+            <div className="card-container">
               <div className="card">
                 <img alt="example" src={foto2} className="img-card " />
                 <div className="texto-card-div">
@@ -98,7 +119,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="card-container2" >
+            <div className="card-container">
               <div className="card-fundo"></div>
               <div className="card">
                 <img alt="example" src={foto3} className="img-card " />
@@ -130,7 +151,10 @@ function App() {
               <PhoneOutlined className="icon1" /> (+244) 000-000-000
             </span>
             <br />
-            <span id="texto2-footer"> <HeatMapOutlined className="icon1" /> R. da Maxinde iepa</span>
+            <span id="texto2-footer">
+              {" "}
+              <HeatMapOutlined className="icon1" /> R. da Maxinde iepa
+            </span>
           </div>
           {/* <div>
           <button id="butao2">
@@ -139,8 +163,7 @@ function App() {
           </div> */}
         </div>
         <div className="copia-escrita">
-        <p>© 2024 Eng. Silva - Todos os direitos reservados</p>
-
+          <p>© 2024 Eng. Silva - Todos os direitos reservados</p>
         </div>
       </footer>
     </>
