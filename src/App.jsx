@@ -37,12 +37,15 @@ function App() {
       </nav>
 
       <div className="Janela1" id="Janela1">
-        <picture className="fundo-imagem" id="fundo-janela1">
+        <picture 
+         className="fundo-imagem" 
+        id="fundo-janela1">
           <div className="fundo-texto-imagem">
             <div className="centralizarbutao" id="centralizarbutao">
               <Gaveta />
 
               {/* <button
+              className="fundo-imagem"
                   className="b_butao"
                   id="butao1"
                   onClick={() => {
@@ -60,16 +63,16 @@ function App() {
         </picture>
 
         <div className="div-fundo-imagem">
-          {/* 
-       <section className="section-agendar">
-  <div className="section-agendar-img"></div> 
-  <div className="container"> */}
+        <div  id="fundo-janela">
+
+          </div>
           <div className="div-fundo-coluna">
+          
             <h5 id="div-texto">
               Por detrás de cada cliente,
               <br /> a excelência no serviço
             </h5>
-            <div className="centralizarbutao" id="centralizarbutao">
+            <div  id="centralizarbutao">
               <button className="b_butao" id="butao1">
                 Agendamento!
               </button>
