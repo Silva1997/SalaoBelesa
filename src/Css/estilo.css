@@ -1,69 +1,53 @@
-
 /*  */
 
+@media only screen and (min-width: 320px) and (max-width: 390px) {
+  #drawer-div {
+    width: auto;
+  }
 
-@media only screen and (min-width: 320px) and  (max-width: 390px) {
   /* agendamento */
-.div-card-agenda-butao{
-  border: none;
-  background-color: #626161;
-  border-radius: 0.4rem;
-  color: #fff;
-  font-size: 14px;
-  font-family: 'Roboto' sans-serif;
-  padding: 8px 8px;
-}
-.div-card-agenda{
-  background-color: #212529;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  margin: 0;
-  width: 100%;
-  height: (100vw * 0.412);
-}
-.div-card-agenda-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  .div-card-agenda-butao {
+    border: none;
+    background-color: #626161;
+    border-radius: 0.4rem;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    font-family: "Roboto" sans-serif;
+    padding: 8px 8px;
+    width: 8vh;
+  }
 
+  .div-card-agenda-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    /* width: 90%;
+    gap: 1rem; */
+    padding: 0.5rem;
+    background-color: #212529;
+  }
 
+ 
+  .div-card-agenda-img {
+    margin: 0;
+object-fit: cover;
+width: 100%;
+height: 100%;
+background-color: #fff;
+
+  }
+#div-texto-card-agenda  #div-texto-card-agenda-1{
+  text-align: center;
+  font-family: "Roboto" sans-serif;
 }
-.div-card-agenda-frame{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.div-card-agenda-frame-1{
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-.div-card-agenda-texto-1 {
+#div-texto-card-agenda{
   color: #fff;
-  font-size: 20px;
-  text-align: start;
-  font-weight: 600;
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
 }
-.div-card-agenda-texto-2{
+#div-texto-card-agenda-1{
   color: #6610f2;
-  font-size: 17px;
-  text-align: start;
-  font-weight: 700;
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
 }
-.div-card-agenda-img{
-  margin: 0;
-  object-fit: contain;
-  width: 70px;
-  height: 60px;
-  background-color: #fff;
-  border-radius: 0.5rem;
-}
-
   /* formulario */
   .texto-formulario-s {
     text-align: start;
@@ -653,69 +637,54 @@
     font-size: calc(2px + 3vw);
   }
 }
-@media only screen and (min-width: 412px) and (max-width: 430px)  {
+@media only screen and (min-width: 410px) and (max-width: 430px) {
+  #drawer-div {
+    width: auto;
+  }
 
-/* agendamento */
-.div-card-agenda-butao{
-  border: none;
-  background-color: #626161;
-  border-radius: 0.4rem;
+  /* agendamento */
+  .div-card-agenda-butao {
+    border: none;
+    background-color: #626161;
+    border-radius: 0.4rem;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    font-family: "Roboto" sans-serif;
+    padding: 8px 8px;
+    width: 8vh;
+  }
+
+  .div-card-agenda-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    /* width: 90%;
+    gap: 1rem; */
+    padding: 0.5rem;
+    background-color: #212529;
+  }
+
+ 
+  .div-card-agenda-img {
+    margin: 0;
+object-fit: cover;
+width: 100%;
+height: 100%;
+background-color: #fff;
+
+  }
+#div-texto-card-agenda  #div-texto-card-agenda-1{
+  text-align: center;
+  font-family: "Roboto" sans-serif;
+}
+#div-texto-card-agenda{
   color: #fff;
-  font-size: 14px;
-  font-family: 'Roboto' sans-serif;
-  padding: 8px 8px;
 }
-.div-card-agenda{
-  background-color: #212529;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  margin: 0;
-  width: 100%;
-  height: (100vw * 0.412);
-}
-.div-card-agenda-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-
-}
-.div-card-agenda-frame{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.div-card-agenda-frame-1{
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-.div-card-agenda-texto-1 {
-  color: #fff;
-  font-size: 20px;
-  text-align: start;
-  font-weight: 600;
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-}
-.div-card-agenda-texto-2{
+#div-texto-card-agenda-1{
   color: #6610f2;
-  font-size: 17px;
-  text-align: start;
-  font-weight: 700;
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
 }
-.div-card-agenda-img{
-  margin: 0;
-  object-fit: contain;
-  width: 70px;
-  height: 60px;
-  background-color: #fff;
-  border-radius: 0.5rem;
-}
-
 
   /* formulario */
   .texto-formulario-s {
@@ -1308,21 +1277,19 @@
 }
 
 /* Aqui Ainda */
-@media only screen and (min-width:500px) and (max-width:680px) and (orientation:portrait) {
- 
+@media only screen and (min-width: 500px) and (max-width: 680px) and (orientation: portrait) {
   /* Equipa */
-  .texto-formulario-s{
-
+  .texto-formulario-s {
     text-align: start;
     font-size: calc(11px + 0.3vw);
   }
-  .formulario-input{
+  .formulario-input {
     display: flex;
     flex-direction: column;
     width: 150%;
     gap: 1rem;
   }
-  .div-formulario-solitacao{
+  .div-formulario-solitacao {
     display: flex;
     flex-direction: row;
     gap: 0.1rem;
@@ -1770,7 +1737,7 @@
     left: -11rem;
     background-color: transparent;
   }
- 
+
   .texto-card {
     position: relative;
     top: -75px;
@@ -1909,26 +1876,23 @@
     text-align: start;
     font-size: calc(14px + 0.3vw);
   }
-  
 }
 
 /*  */
 
-@media only screen and (min-width:748px) and (max-width:856px) and (orientation:portrait) {
- 
+@media only screen and (min-width: 748px) and (max-width: 856px) and (orientation: portrait) {
   /* Equipa */
-  .texto-formulario-s{
-
+  .texto-formulario-s {
     text-align: start;
     font-size: calc(11px + 0.3vw);
   }
-  .formulario-input{
+  .formulario-input {
     display: flex;
     flex-direction: column;
     width: 150%;
     gap: 1rem;
   }
-  .div-formulario-solitacao{
+  .div-formulario-solitacao {
     display: flex;
     flex-direction: row;
     gap: 0.1rem;
@@ -2129,7 +2093,6 @@
   }
 
   #fundo-janela1 {
-    
     background-image: url("../assets/fundo.png");
     background-size: cover;
     background-position: center;
@@ -2377,7 +2340,7 @@
     left: -15rem;
     background-color: transparent;
   }
- 
+
   .texto-card {
     position: relative;
     top: -75px;
@@ -2517,24 +2480,21 @@
     text-align: start;
     font-size: calc(14px + 0.3vw);
   }
-  
 }
 
-@media only screen and (min-width:907px) and (max-width:986px) and (orientation:portrait) {
- 
+@media only screen and (min-width: 907px) and (max-width: 986px) and (orientation: portrait) {
   /* Equipa */
-  .texto-formulario-s{
-
+  .texto-formulario-s {
     text-align: start;
     font-size: calc(11px + 0.3vw);
   }
-  .formulario-input{
+  .formulario-input {
     display: flex;
     flex-direction: column;
     width: 150%;
     gap: 1rem;
   }
-  .div-formulario-solitacao{
+  .div-formulario-solitacao {
     display: flex;
     flex-direction: row;
     gap: 0.1rem;
@@ -2735,7 +2695,6 @@
   }
 
   #fundo-janela1 {
-    
     background-image: url("../assets/fundo.png");
     background-size: cover;
     background-position: center;
@@ -2983,7 +2942,7 @@
     left: -15rem;
     background-color: transparent;
   }
- 
+
   .texto-card {
     position: relative;
     top: -75px;
@@ -3123,14 +3082,12 @@
     text-align: start;
     font-size: calc(14px + 0.3vw);
   }
-  
 }
-
 
 /*  */
 
 /* Pc  Aqui rever*/
-@media only screen and (min-width:1024px) and (max-width: 1920px)and (orientation:landscape) {
+@media only screen and (min-width: 1024px) and (max-width: 1920px) and (orientation: landscape) {
   #imagem-icon {
     overflow: hidden;
     border: none;
