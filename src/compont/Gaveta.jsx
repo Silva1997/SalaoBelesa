@@ -33,26 +33,36 @@ const Gaveta = () => {
 
 <Card.Meta
 className='div-card-agenda-container'
-          avatar={<Avatar src={foto} />}
+          avatar={<Avatar size={45} src={foto} />}
           description={
-            <>
-              <p id='div-texto-card-agenda'>Manicure</p>
-              <p id='div-texto-card-agenda-1'>2000 akz</p>
-              <button onClick={showChildrenDrawer} className="div-card-agenda-butao" >Reservar</button>
-            </>
+            <div  className='wrap-card-div'>
+
+             <div>
+             <h6 id='div-texto-card-agenda'>Manicure</h6>
+             <p id='div-texto-card-agenda-1'>2000 akz</p>
+             </div>
+
+             <div>
+             <button onClick={showChildrenDrawer} className="div-card-agenda-butao" >Reservar</button>
+             </div>
+
+            </div>
           }
         />
 
     
 {/* Segundo */}
         <Drawer
+
           title="Agendar"
           width={320}
           closable={false}
           onClose={onChildrenDrawerClose}
           open={childrenDrawer}
         >
-   <Calenadrio/>
+  <div style={{display:'flex',justifyContent:'center'}}>
+  <Calenadrio/>
+  </div>
         </Drawer>
       </Drawer>
     </>
