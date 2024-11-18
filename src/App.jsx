@@ -89,6 +89,7 @@ function App() {
 
       <div className="Janela2">
         <div>
+        {/* <Cardhorizonatl/> */}
           <Rolagem />
         </div>
       </div>
@@ -284,3 +285,26 @@ function App() {
 }
 
 export default App;
+
+
+
+function Cardhorizonatl(){
+
+return(<section>
+
+  <div className="cards-wrapper">
+    <div className="card-card">card-card 1</div>
+    <div className="card-card">card-card 2</div>
+    <div className="card-card">card-card 3</div>
+    <div className="card-card">card-card 4</div>
+    <div className="card-card">card-card 5</div>
+    <div className="card-card">card-card 6</div>
+    <div className="card-card">card-card 7</div>
+    <div className="card-card">card-card 9</div>
+    <div className="card-card">card-card 9</div>
+    <div className="card-card">card-card 10</div>
+  </div>
+</section>)
+
+
+}

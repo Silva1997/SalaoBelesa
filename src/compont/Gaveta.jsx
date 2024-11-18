@@ -29,7 +29,12 @@ const Gaveta = () => {
       >
         Agendamento
       </button>
-      <Drawer title="Agendamendo"  width={'310px'} id='drawer-div' closable={false} onClose={onClose} open={open}>
+      <Drawer title="Agendamendo"   width={'310px'} id='drawer-div' closable={false} onClose={onClose} open={open}>
+
+<div style={{display:'flex',flexDirection:"column",gap:'12px'}}>
+
+
+
 
 <Card.Meta
 className='div-card-agenda-container'
@@ -47,9 +52,52 @@ className='div-card-agenda-container'
              </div>
 
             </div>
+            
           }
         />
 
+
+<Card.Meta
+className='div-card-agenda-container'
+          avatar={<Avatar size={45} src={foto} />}
+          description={
+            <div  className='wrap-card-div'>
+
+             <div>
+             <h6 id='div-texto-card-agenda'>Penicure</h6>
+             <p id='div-texto-card-agenda-1'>4000 akz</p>
+             </div>
+
+             <div>
+             <button onClick={showChildrenDrawer} className="div-card-agenda-butao" >Reservar</button>
+             </div>
+
+            </div>
+            
+          }
+        />
+
+<Card.Meta
+className='div-card-agenda-container'
+          avatar={<Avatar size={45} src={foto} />}
+          description={
+            <div  className='wrap-card-div'>
+
+             <div>
+             <h6 id='div-texto-card-agenda'>Cabeleiro</h6>
+             <p id='div-texto-card-agenda-1'>6000 akz</p>
+             </div>
+
+             <div>
+             <button onClick={showChildrenDrawer} className="div-card-agenda-butao" >Reservar</button>
+             </div>
+
+            </div>
+            
+          }
+        />
+
+</div>
     
 {/* Segundo */}
         <Drawer
@@ -59,6 +107,7 @@ className='div-card-agenda-container'
           closable={false}
           onClose={onChildrenDrawerClose}
           open={childrenDrawer}
+           id='drawer-div'
         >
   <div style={{display:'flex',justifyContent:'center'}}>
   <Calenadrio/>

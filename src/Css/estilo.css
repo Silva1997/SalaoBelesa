@@ -2,15 +2,99 @@
 
 
 @media only screen and (min-width: 360px) and (max-width: 365px) {
+/* Card horizonatl */
+
+:root {
+  --page-margin: min(2rem, 5vw);
+  color: #444;
+}
+
+section {
+  display: grid;
+  grid-template-columns: var(--page-margin) 1fr var(--page-margin);
+  grid-template-areas: "center";
+}
+
+section > * {
+  grid-column: 2; /* 'center' seria a segunda coluna */
+}
+
+.cards-wrapper {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  overflow: auto;
+  padding-bottom: 1rem;
+  padding-right: var(--page-margin);
+}
+
+.cards-wrapper::-webkit-scrollbar {
+  width: 8px; /* Define a largura da barra de rolagem */
+  height: 4px;
+}
+
+.cards-wrapper::-webkit-scrollbar-thumb {
+  background-color: #343a40; /* Torna o "thumb" da barra de rolagem invisível */
+}
+
+.cards-wrapper::-webkit-scrollbar-track {
+  background: transparent; /* Torna o "track" da barra de rolagem invisível */
+}
+.cards-wrapper .card-card {
+  display: grid;
+  place-content: center;
+  background-color: #d0f0ee;
+  color: #15928A;
+  font-size: 1.5rem;
+  height: 22rem;
+  min-width: 17.5rem;
+  overflow: hidden;
+  -ms-overflow-style: none;  /* Esconde a barra de rolagem no IE 10+ */
+  scrollbar-width: none;  /* Esconde a barra de rolagem no Firefox */
+}
+
+
   /* Agenda */
+  .div-card-agenda-butao:hover{
+    background-color: var(--bs-purple);
+    color: #fff;
+   
+  }
+#drawer-div{
+  /* border-bottom: 1px solid #fff; */
+  background-color: rgb(59, 59, 59);
+  color: #fff;
+}
+  #texto-card-reserva{
+    color: #495057;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 500;
+  }
+  #texto-card-reserva1{
+    color: #FFF;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 400;
+  }
   .Carousel-main {
     
     display: flex;
    justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #1c1b1b;
     margin: 0;
-    border-radius:0.5rem;
+    /* border-radius:0px 0px 2px 2px; */
+    border-bottom: 1px solid #343a40;
   }
 .texto-card-main{
   color: #fff;
@@ -28,10 +112,11 @@ font-size: 13px;
 
 
 }
+
   .card-container-reserva:nth-child(1) {
     /* display: flex;
   flex-direction: column; */
-    color: "#fff";
+    color: #fff;
     font-family: "Roboto" sans-serif;
     font-optical-sizing: auto;
     overflow: hidden;
@@ -50,6 +135,10 @@ font-size: 13px;
     overflow: hidden;
     gap: 0;
     margin: 0;
+  }
+  .texto-card-main:hover{
+    background-color: #626161;
+    color: #fff;
   }
   /*  */
   /* Scroll bar */
@@ -113,7 +202,8 @@ font-size: 13px;
     border-radius: 0.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color: #212529;
+    /* background-color: #212529; */
+    background-color: #1c1b1b;
     /* line-height: -1px; */
   }
   .wrap-card-div {
@@ -326,10 +416,12 @@ font-size: 13px;
   }
   .img1 {
     /* overflow: hidden; */
+    /* object-fit: contain; */
     object-fit: cover;
     width: 100%;
-    height: 100%;
-    border-radius: 12px 12px;
+    height: auto;
+    background-position: center;
+    /* border-radius: 12px 12px; */
   }
 
   .promocao:focus {
@@ -749,14 +841,45 @@ font-size: 13px;
 
 @media only screen and (min-width: 375px) and (max-width: 390px)  {
   /* Agenda */
+  .div-card-agenda-butao:hover{
+    background-color: var(--bs-purple);
+    color: #fff;
+   
+  }
+#drawer-div{
+  /* border-bottom: 1px solid #fff; */
+  background-color: rgb(59, 59, 59);
+  color: #fff;
+}
+  #texto-card-reserva{
+    color: #495057;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 500;
+  }
+  #texto-card-reserva1{
+    color: #FFF;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 400;
+  }
   .Carousel-main {
     
     display: flex;
    justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #1c1b1b;
     margin: 0;
-    border-radius:0.5rem;
+    /* border-radius:0px 0px 2px 2px; */
+    border-bottom: 1px solid #343a40;
   }
 .texto-card-main{
   color: #fff;
@@ -775,11 +898,10 @@ font-size: 13px;
 
 }
 
-
   .card-container-reserva:nth-child(1) {
     /* display: flex;
   flex-direction: column; */
-    color: "#fff";
+    color: #fff;
     font-family: "Roboto" sans-serif;
     font-optical-sizing: auto;
     overflow: hidden;
@@ -798,6 +920,10 @@ font-size: 13px;
     overflow: hidden;
     gap: 0;
     margin: 0;
+  }
+  .texto-card-main:hover{
+    background-color: #626161;
+    color: #fff;
   }
   /*  */
   /* Scroll bar */
@@ -1499,14 +1625,45 @@ font-size: 13px;
 @media only screen and (min-width: 410px) and (max-width: 413px) {
 
    /* Agenda */
-   .Carousel-main {
+   .div-card-agenda-butao:hover{
+    background-color: var(--bs-purple);
+    color: #fff;
+   
+  }
+#drawer-div{
+  /* border-bottom: 1px solid #fff; */
+  background-color: rgb(59, 59, 59);
+  color: #fff;
+}
+  #texto-card-reserva{
+    color: #495057;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 500;
+  }
+  #texto-card-reserva1{
+    color: #FFF;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 400;
+  }
+  .Carousel-main {
     
     display: flex;
    justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #1c1b1b;
     margin: 0;
-    border-radius:0.5rem;
+    /* border-radius:0px 0px 2px 2px; */
+    border-bottom: 1px solid #343a40;
   }
 .texto-card-main{
   color: #fff;
@@ -1524,10 +1681,11 @@ font-size: 13px;
 
 
 }
+
   .card-container-reserva:nth-child(1) {
     /* display: flex;
   flex-direction: column; */
-    color: "#fff";
+    color: #fff;
     font-family: "Roboto" sans-serif;
     font-optical-sizing: auto;
     overflow: hidden;
@@ -1547,6 +1705,11 @@ font-size: 13px;
     gap: 0;
     margin: 0;
   }
+  .texto-card-main:hover{
+    background-color: #626161;
+    color: #fff;
+  }
+  /*  */
   /*  */
   /* Scroll bar */
 
@@ -2245,15 +2408,46 @@ font-size: 13px;
 }
 
 @media only screen and (min-width: 414px) and (max-width: 490px) {
-   /* Agenda */
-   .Carousel-main {
+  /* Agenda */
+  .div-card-agenda-butao:hover{
+    background-color: var(--bs-purple);
+    color: #fff;
+   
+  }
+#drawer-div{
+  /* border-bottom: 1px solid #fff; */
+  background-color: rgb(59, 59, 59);
+  color: #fff;
+}
+  #texto-card-reserva{
+    color: #495057;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 500;
+  }
+  #texto-card-reserva1{
+    color: #FFF;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 400;
+  }
+  .Carousel-main {
     
     display: flex;
    justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #1c1b1b;
     margin: 0;
-    border-radius:0.5rem;
+    /* border-radius:0px 0px 2px 2px; */
+    border-bottom: 1px solid #343a40;
   }
 .texto-card-main{
   color: #fff;
@@ -2271,10 +2465,11 @@ font-size: 13px;
 
 
 }
+
   .card-container-reserva:nth-child(1) {
     /* display: flex;
   flex-direction: column; */
-    color: "#fff";
+    color: #fff;
     font-family: "Roboto" sans-serif;
     font-optical-sizing: auto;
     overflow: hidden;
@@ -2293,6 +2488,10 @@ font-size: 13px;
     overflow: hidden;
     gap: 0;
     margin: 0;
+  }
+  .texto-card-main:hover{
+    background-color: #626161;
+    color: #fff;
   }
   /*  */
   /* Scroll bar */
@@ -2992,15 +3191,46 @@ font-size: 13px;
 
 /* Aqui Ainda */
 @media only screen and (min-width: 500px) and (max-width: 680px) and (orientation: portrait) {
-   /* Agenda */
-   .Carousel-main {
+     /* Agenda */
+  .div-card-agenda-butao:hover{
+    background-color: var(--bs-purple);
+    color: #fff;
+   
+  }
+#drawer-div{
+  /* border-bottom: 1px solid #fff; */
+  background-color: rgb(59, 59, 59);
+  color: #fff;
+}
+  #texto-card-reserva{
+    color: #495057;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 500;
+  }
+  #texto-card-reserva1{
+    color: #FFF;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 400;
+  }
+  .Carousel-main {
     
     display: flex;
    justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #1c1b1b;
     margin: 0;
-    border-radius:0.5rem;
+    /* border-radius:0px 0px 2px 2px; */
+    border-bottom: 1px solid #343a40;
   }
 .texto-card-main{
   color: #fff;
@@ -3018,10 +3248,11 @@ font-size: 13px;
 
 
 }
+
   .card-container-reserva:nth-child(1) {
     /* display: flex;
   flex-direction: column; */
-    color: "#fff";
+    color: #fff;
     font-family: "Roboto" sans-serif;
     font-optical-sizing: auto;
     overflow: hidden;
@@ -3041,7 +3272,126 @@ font-size: 13px;
     gap: 0;
     margin: 0;
   }
+  .texto-card-main:hover{
+    background-color: #626161;
+    color: #fff;
+  }
   /*  */
+  /* Scroll bar */
+
+  body {
+    --sb-track-color: #000000;
+    --sb-thumb-color: #07ff83;
+    --sb-size: 8px;
+  }
+
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+  }
+
+  /*  */
+
+  #drawer-div {
+    width: auto;
+  }
+
+  /* agendamento */
+  .div-card-agenda-butao {
+    border: none;
+    background-color: #626161;
+    border-radius: 0.4rem;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    height: 75%;
+    margin-top: 0.8rem;
+    padding: 11px 11px;
+    width: 100%;
+
+    position: relative;
+    top: -0.5rem;
+  }
+
+  .div-card-agenda-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 12vw;
+    border-radius: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #212529;
+    line-height: 0px;
+  }
+  .wrap-card-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding-top: 0;
+    margin-top: 0;
+    line-height: -1rem;
+  }
+  .div-card-agenda-img {
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  #div-texto-card-agenda #div-texto-card-agenda-1 {
+    text-align: center;
+    font-family: "Roboto" sans-serif;
+  }
+  #div-texto-card-agenda {
+    margin: 0;
+    color: #fff;
+    text-align: start;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  #div-texto-card-agenda-1 {
+    text-align: start;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    color: #6610f2;
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+  }
+
+  /* formulario */
+  .texto-formulario-s {
+    text-align: start;
+    font-size: calc(11px + 0.3vw);
+  }
+  .div-formulario-solitacao .formulario-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 
   /* Equipa */
   .texto-formulario-s {
@@ -3646,15 +3996,46 @@ font-size: 13px;
 /*  */
 
 @media only screen and (min-width: 748px) and (max-width: 856px) and (orientation: portrait) {
-   /* Agenda */
-   .Carousel-main {
+  /* Agenda */
+  .div-card-agenda-butao:hover{
+    background-color: var(--bs-purple);
+    color: #fff;
+   
+  }
+#drawer-div{
+  /* border-bottom: 1px solid #fff; */
+  background-color: rgb(59, 59, 59);
+  color: #fff;
+}
+  #texto-card-reserva{
+    color: #495057;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 500;
+  }
+  #texto-card-reserva1{
+    color: #FFF;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 400;
+  }
+  .Carousel-main {
     
     display: flex;
    justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #1c1b1b;
     margin: 0;
-    border-radius:0.5rem;
+    /* border-radius:0px 0px 2px 2px; */
+    border-bottom: 1px solid #343a40;
   }
 .texto-card-main{
   color: #fff;
@@ -3672,10 +4053,11 @@ font-size: 13px;
 
 
 }
+
   .card-container-reserva:nth-child(1) {
     /* display: flex;
   flex-direction: column; */
-    color: "#fff";
+    color: #fff;
     font-family: "Roboto" sans-serif;
     font-optical-sizing: auto;
     overflow: hidden;
@@ -3695,7 +4077,127 @@ font-size: 13px;
     gap: 0;
     margin: 0;
   }
+  .texto-card-main:hover{
+    background-color: #626161;
+    color: #fff;
+  }
   /*  */
+  /* Scroll bar */
+
+  body {
+    --sb-track-color: #000000;
+    --sb-thumb-color: #07ff83;
+    --sb-size: 8px;
+  }
+
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+  }
+
+  /*  */
+
+  #drawer-div {
+    width: auto;
+  }
+
+  /* agendamento */
+  .div-card-agenda-butao {
+    border: none;
+    background-color: #626161;
+    border-radius: 0.4rem;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    height: 75%;
+    margin-top: 0.8rem;
+    padding: 11px 11px;
+    width: 100%;
+
+    position: relative;
+    top: -0.5rem;
+  }
+
+  .div-card-agenda-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 12vw;
+    border-radius: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #212529;
+    line-height: 0px;
+  }
+  .wrap-card-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding-top: 0;
+    margin-top: 0;
+    line-height: -1rem;
+  }
+  .div-card-agenda-img {
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  #div-texto-card-agenda #div-texto-card-agenda-1 {
+    text-align: center;
+    font-family: "Roboto" sans-serif;
+  }
+  #div-texto-card-agenda {
+    margin: 0;
+    color: #fff;
+    text-align: start;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  #div-texto-card-agenda-1 {
+    text-align: start;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    color: #6610f2;
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+  }
+
+  /* formulario */
+  .texto-formulario-s {
+    text-align: start;
+    font-size: calc(11px + 0.3vw);
+  }
+  .div-formulario-solitacao .formulario-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   /* Equipa */
   .texto-formulario-s {
     text-align: start;
@@ -4299,14 +4801,45 @@ font-size: 13px;
 
 @media only screen and (min-width: 907px) and (max-width: 986px) and (orientation: portrait) {
    /* Agenda */
-   .Carousel-main {
+   .div-card-agenda-butao:hover{
+    background-color: var(--bs-purple);
+    color: #fff;
+   
+  }
+#drawer-div{
+  /* border-bottom: 1px solid #fff; */
+  background-color: rgb(59, 59, 59);
+  color: #fff;
+}
+  #texto-card-reserva{
+    color: #495057;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 500;
+  }
+  #texto-card-reserva1{
+    color: #FFF;
+    font-family: "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin: 0;
+    padding:0;
+    font-weight: 400;
+  }
+  .Carousel-main {
     
     display: flex;
    justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #1c1b1b;
     margin: 0;
-    border-radius:0.5rem;
+    /* border-radius:0px 0px 2px 2px; */
+    border-bottom: 1px solid #343a40;
   }
 .texto-card-main{
   color: #fff;
@@ -4324,10 +4857,11 @@ font-size: 13px;
 
 
 }
+
   .card-container-reserva:nth-child(1) {
     /* display: flex;
   flex-direction: column; */
-    color: "#fff";
+    color: #fff;
     font-family: "Roboto" sans-serif;
     font-optical-sizing: auto;
     overflow: hidden;
@@ -4346,6 +4880,10 @@ font-size: 13px;
     overflow: hidden;
     gap: 0;
     margin: 0;
+  }
+  .texto-card-main:hover{
+    background-color: #626161;
+    color: #fff;
   }
   /*  */
   /* Equipa */

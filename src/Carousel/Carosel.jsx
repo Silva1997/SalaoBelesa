@@ -28,7 +28,7 @@ const Rolagem = () => {
   return (
     <>
       <h6 id="texto1"><span id="text-1">01.</span>Trabalhos</h6>  <hr id="text-1_1"></hr>
-      <Carousel
+      {/* <Carousel
         afterChange={onChange}
         arrows
         className="Rodalgem"
@@ -40,13 +40,29 @@ const Rolagem = () => {
               alt="imagem"
               className="img1"
               id="img-rolagem"
-              // style={{ height: "40vh" }}
+       
             />
 
-            {/* <h6 className="promocao">{dado.nome}</h6> */}
           </div>
         ))}
-      </Carousel>
+      </Carousel> */}
+
+
+      <div className="cards-wrapper">
+      {dados.map((dado, index) => (
+          <div className="card-card" key={index}>
+        
+            <img
+              src={dado.url}
+              alt="imagem"
+              className="img1"
+              id="img-rolagem"
+       
+            />
+
+          </div>
+      ))}
+      </div>
     </>
   );
 };
