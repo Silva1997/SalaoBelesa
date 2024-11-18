@@ -1,12 +1,46 @@
-import React, { useState } from 'react';
-import { Drawer,Card,Avatar } from 'antd';
-import foto from '../assets/reserva.png'
-import '../Css/estilo.css'
-import Calenadrio from './Calendario';
+import React, { useEffect, useState } from "react";
+import { Drawer, Card, Avatar } from "antd";
+import foto from "../assets/reserva.png";
+import "../Css/estilo.css";
+import Calenadrio from "./Calendario";
 
 const Gaveta = () => {
   const [open, setOpen] = React.useState(false);
   const [childrenDrawer, setChildrenDrawer] = useState(false);
+  const [adicionar, setAdd] = useState('');
+  const [prece, setPreco] = useState('');
+
+  function handleBuscar(value,preco){
+    //Puscar os valor selecionado do card dos servicos
+    setAdd(value);
+    setPreco(preco);
+    // setAdd((push)=>[...push,value]);
+    console.log("O valor selecionado foi",adicionar ,'And',prece)
+  }
+  useEffect(()=>{
+    console.log("Update",adicionar)
+    
+    },[adicionar,prece])
+
+
+  const detalhes = [
+    {
+      id: 1,
+      tipo: "Manicure",
+      preco: "2.500,00",
+    },
+    {
+      id: 2,
+      tipo: "Pedicure",
+      preco: "1.500,00",
+    },
+    {
+      id: 3,
+      tipo: "Cabelo",
+      preco: "8.500,00",
+    },
+  ];
+
   const showDrawer = () => {
     setOpen(true);
   };
@@ -19,9 +53,10 @@ const Gaveta = () => {
   const onChildrenDrawerClose = () => {
     setChildrenDrawer(false);
   };
+
   return (
     <>
-        <button
+      <button
         type="primary"
         className="b_butao"
         id="butao1"
@@ -29,26 +64,32 @@ const Gaveta = () => {
       >
         Agendamento
       </button>
-      <Drawer title="Agendamendo"   width={'310px'} id='drawer-div' closable={false} onClose={onClose} open={open}>
-
-<div style={{display:'flex',flexDirection:"column",gap:'12px'}}>
-
-
-
-
-<Card.Meta
-className='div-card-agenda-container'
+      <Drawer
+        title="Agendamendo"
+        width={"310px"}
+        id="drawer-div"
+        closable={false}
+        onClose={onClose}
+        open={open}
+      >
+      
+  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }} key={0}> 
+ {
+  detalhes.map((add,index)=>(<>
+    <Card.Meta
+   
+      className='div-card-agenda-container'
           avatar={<Avatar size={45} src={foto} />}
           description={
-            <div  className='wrap-card-div'>
+            <div  className='wrap-card-div' key={add.id}>
 
              <div>
-             <h6 id='div-texto-card-agenda'>Manicure</h6>
-             <p id='div-texto-card-agenda-1'>2000 akz</p>
+             <h6 id='div-texto-card-agenda'>{add.tipo}</h6>
+             <p id='div-texto-card-agenda-1'>{add.preco}</p>
              </div>
 
              <div>
-             <button onClick={showChildrenDrawer} className="div-card-agenda-butao" >Reservar</button>
+             <button onClick={()=>{showChildrenDrawer();handleBuscar(add.tipo,add.preco)}} className="div-card-agenda-butao" >Reservar</button>
              </div>
 
             </div>
@@ -56,8 +97,19 @@ className='div-card-agenda-container'
           }
         />
 
+  </>))
+ }
+       
 
-<Card.Meta
+
+
+
+
+
+
+
+
+          {/* <Card.Meta
 className='div-card-agenda-container'
           avatar={<Avatar size={45} src={foto} />}
           description={
@@ -95,23 +147,21 @@ className='div-card-agenda-container'
             </div>
             
           }
-        />
+        /> */}
+        </div>
 
-</div>
-    
-{/* Segundo */}
+        {/* Segundo */}
         <Drawer
-
           title="Agendar"
           width={320}
           closable={false}
           onClose={onChildrenDrawerClose}
           open={childrenDrawer}
-           id='drawer-div'
+          id="drawer-div"
         >
-  <div style={{display:'flex',justifyContent:'center'}}>
-  <Calenadrio/>
-  </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Calenadrio add={adicionar} prece={prece} />
+          </div>
         </Drawer>
       </Drawer>
     </>
