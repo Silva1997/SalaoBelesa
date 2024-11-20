@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Drawer, Menu } from 'antd';
 import { MenuOutlined } from "@ant-design/icons";
+import '../Css/estilo.css'
 import { Link,BrowserRouter,Routes,Route,Outlet } from 'react-router-dom'; // Importando o Link do React Router para navegação
 
 export default function Rotas() {
@@ -17,7 +18,7 @@ export default function Rotas() {
     );
   }
 const App = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = React.useState(false);
   const showDrawer = () => {
     setOpen(true);
   };
@@ -39,7 +40,8 @@ const App = () => {
         placement="right"
         onClose={onClose}
         open={open}
-        width={250} // Largura do Drawer
+        id='Menu-drawer'
+        width={360} // Largura do Drawer
       >
         {/* Menu com Links para navegação */}
         <Menu

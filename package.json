@@ -1,7 +1,7 @@
 {
   "name": "project1",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,6 +14,8 @@
     "@vercel/postgres": "^0.10.0",
     "antd": "^5.21.6",
     "axios": "^1.7.7",
+    "framer-motion": "^12.0.0-alpha.1",
+    "motion": "^11.11.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
@@ -31,5 +33,20 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "vite": "^5.4.10"
-  }
+  },
+  "description": "Primeiro",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silva1997/SalaoBelesa.git"
+  },
+  "keywords": [
+    "199710"
+  ],
+  "author": "Eugenio Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Silva1997/SalaoBelesa/issues"
+  },
+  "homepage": "https://github.com/Silva1997/SalaoBelesa#readme"
 }
