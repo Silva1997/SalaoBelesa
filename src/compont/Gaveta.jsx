@@ -7,21 +7,19 @@ import Calenadrio from "./Calendario";
 const Gaveta = () => {
   const [open, setOpen] = React.useState(false);
   const [childrenDrawer, setChildrenDrawer] = useState(false);
-  const [adicionar, setAdd] = useState('');
-  const [prece, setPreco] = useState('');
+  const [adicionar, setAdd] = useState("");
+  const [prece, setPreco] = useState("");
 
-  function handleBuscar(value,preco){
+  function handleBuscar(value, preco) {
     //Puscar os valor selecionado do card dos servicos
     setAdd(value);
     setPreco(preco);
     // setAdd((push)=>[...push,value]);
-    console.log("O valor selecionado foi",adicionar ,'And',prece)
+    console.log("O valor selecionado foi", adicionar, "And", prece);
   }
-  useEffect(()=>{
-    console.log("Update",adicionar)
-    
-    },[adicionar,prece])
-
+  useEffect(() => {
+    console.log("Update", adicionar);
+  }, [adicionar, prece]);
 
   const detalhes = [
     {
@@ -72,42 +70,37 @@ const Gaveta = () => {
         onClose={onClose}
         open={open}
       >
-      
-  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }} key={0}> 
- {
-  detalhes.map((add,index)=>(<>
-    <Card.Meta
-   
-      className='div-card-agenda-container'
-          avatar={<Avatar size={45} src={foto} />}
-          description={
-            <div  className='wrap-card-div' key={add.id}>
-
-             <div>
-             <h6 id='div-texto-card-agenda'>{add.tipo}</h6>
-             <p id='div-texto-card-agenda-1'>{add.preco}</p>
-             </div>
-
-             <div>
-             <button onClick={()=>{showChildrenDrawer();handleBuscar(add.tipo,add.preco)}} className="div-card-agenda-butao" >Reservar</button>
-             </div>
-
-            </div>
-            
-          }
-        />
-
-  </>))
- }
+        <div
+          style={{ display: "flex", flexDirection: "column", gap: "12px" }}
+          key={0}
+        >
+          {detalhes.map((add, index) => (
+            <>
+              <Card.Meta
+                className="div-card-agenda-container"
+                avatar={<Avatar size={45} src={foto} />}
+                description={
+                  <div className="wrap-card-div">
+                  <span className="div-card-position" >
        
-
-
-
-
-
-
-
-
+                <h6 id="div-texto-card-agenda">{add.tipo}</h6>
+                <p id="div-texto-card-agenda-1">{add.preco}</p>
+            
+                  </span>
+                    <button
+                      onClick={() => {
+                        showChildrenDrawer();
+                        handleBuscar(add.tipo, add.preco);
+                      }}
+                      className="div-card-agenda-butao"
+                    >
+                      Reservar
+                    </button>
+                  </div>
+                }
+              />
+            </>
+          ))}
 
           {/* <Card.Meta
 className='div-card-agenda-container'
